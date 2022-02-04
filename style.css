@@ -1,0 +1,379 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Rubik", sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem 0;
+}
+
+.design {
+    position: absolute;
+    width: 33rem;
+    top: -20rem;
+    background: linear-gradient(hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+    border-radius: 0 0 50rem 50rem;
+    bottom: 6rem;
+    left: -6rem;
+    z-index: -1;
+}
+
+.design:nth-child(2) {
+    position: fixed;
+    left: initial;
+    right: -13rem;
+    top: 8rem;
+    border-radius: 50rem 50rem 0 0;
+    bottom: 0;
+    opacity: 0.05;
+}
+
+.container {
+    display: flex;
+    width: 90%;
+    max-width: 850px;
+    gap: 8vw;
+    align-items: center;
+    margin-left: 10rem;
+}
+
+.container article {
+    flex-basis: 50%;
+}
+
+.container article h1 {
+    color: hsl(271, 36%, 24%);
+    font-size: 2.5rem;
+    margin-bottom: 0.5em;
+    /* opacity: 0; */
+    animation: fadeLeft 0.75s 1s ease-out forwards;
+}
+
+.container article p {
+    color: hsl(270, 7%, 64%);
+    line-height: 1.75em;
+    font-size: 1rem;
+    /* opacity: 0; */
+    animation: fadeRight 0.75s 1s ease-out forwards;
+}
+
+/* --------------------mobile start----------------------- */
+
+.mobile {
+    width: 250px;
+    aspect-ratio: 9/18;
+    border-radius: 3em;
+    border: 1em solid white;
+    background-color: hsl(270, 20%, 96%);
+    box-shadow: 0 0 80px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative;
+    flex-shrink: 0;
+    font-size: 10px;
+}
+
+.mobile header {
+    display: flex;
+    align-items: center;
+    padding: 1.25em;
+    padding-top: 3em;
+    background: linear-gradient(
+        -90deg,
+        hsl(293, 100%, 63%),
+        hsl(264, 100%, 61%)
+    );
+    gap: 1em;
+    position: relative;
+    border-radius: 0.5em;
+}
+
+.arrow {
+    outline: 1px solid white;
+    width: 0.5em;
+    position: relative;
+    transform: rotate(-45deg);
+    transform-origin: left;
+}
+
+.arrow::after {
+    content: "";
+    inset: 0;
+    outline: inherit;
+    background-color: inherit;
+    transform: rotate(90deg);
+    transform-origin: left;
+    position: absolute;
+}
+
+.mobile__avatar {
+    width: 12%;
+    border-radius: 50%;
+    border: 0.15em solid white;
+}
+
+.ellipsis {
+    width: 0.1rem;
+    aspect-ratio: 1;
+    background-color: white;
+    border-radius: 50%;
+    position: relative;
+    margin-left: auto;
+}
+
+.ellipsis::after,
+.ellipsis::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: inherit;
+    border-radius: inherit;
+}
+
+.ellipsis::after {
+    transform: translateY(calc(100% + 3px));
+}
+
+.ellipsis::before {
+    transform: translateY(calc(-100% - 3px));
+}
+
+.mobile header::before {
+    content: "";
+    position: absolute;
+    width: 55%;
+    height: 2.1em;
+    background: white;
+    left: 50%;
+    top: -1px;
+    transform: translateX(-50%);
+    border-radius: 0 0 1.5em 1.5em;
+}
+
+.mobile__name {
+    color: white;
+    margin-bottom: 0.2em;
+}
+
+.mobile__status {
+    color: hsl(276, 100%, 81%);
+    font-size: 0.7em;
+}
+
+p.message__received,
+p.message__send {
+    background-color: rgb(146, 65, 200, 0.1);
+    color: rgb(146, 65, 200);
+    border-radius: 1em 1em 1em 0.3em;
+    padding: 0.5em 1em;
+    font-size: 0.8em;
+    margin: 1.25em;
+    max-width: 55%;
+    width: max-content;
+    line-height: 1.5em;
+    /* opacity: 0; */
+    animation: slideright 1s 0.2s ease-out forwards;
+}
+
+p.message__send {
+    margin-left: auto;
+    background-color: white;
+    color: hsl(271, 15%, 43%);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 1em 1em 0.3em 1em;
+    /* opacity: 0; */
+    animation: slideleft 1s 0.2s ease-out forwards;
+}
+
+.price-card {
+    background: linear-gradient(
+        90deg,
+        hsl(293, 100%, 63%),
+        hsl(264, 100%, 61%)
+    );
+    padding: 1em;
+    display: flex;
+    border-radius: 1em 1em 1em 0.3em;
+    align-items: center;
+    gap: 1em;
+    color: white;
+    font-size: 0.8em;
+    width: 70%;
+    margin: 1.25em;
+    /* opacity: 0; */
+    animation: slideright 1s 0.2s ease-out forwards;
+}
+
+.price-card__price {
+    font-size: 1.75em;
+    font-weight: 700;
+    margin-left: auto;
+    margin-right: 0.5em;
+}
+
+.price-card__circle {
+    width: 20px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 2px solid hsl(289, 100%, 72%);
+}
+
+.images__send {
+    display: flex;
+    max-width: 57%;
+    justify-content: space-between;
+    margin: 1.25em;
+    margin-left: auto;
+    /* opacity: 0; */
+    animation: slideleft 1s 0.2s ease-out forwards;
+}
+
+.images__send img {
+    width: 4em;
+    border-radius: 1em;
+}
+
+.mobile input {
+    border: none;
+    outline: none;
+    flex: 1;
+    margin-left: 1.5em;
+    font-size: 1em;
+}
+
+.mobile form {
+    background-color: white;
+    border-radius: 20em;
+    overflow: hidden;
+    height: max-content;
+    height: 3.5em;
+    display: flex;
+    padding: 0.5em;
+    position: absolute;
+    bottom: 0;
+    left: 1.25em;
+    right: 1.25em;
+    margin-bottom: 1.25em;
+}
+
+input::placeholder {
+    color: hsl(206, 6%, 79%);
+    font-family: inherit;
+    font-size: 1em;
+}
+
+.mobile button {
+    height: 100%;
+    aspect-ratio: 1;
+    background-color: hsl(271, 36%, 24%);
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(180deg);
+}
+
+.arrow.submit {
+    width: 0.5em;
+    outline: 0.1em solid white;
+}
+
+/* --------------------mobile end----------------------- */
+
+@media (max-width: 1200px) {
+    .design {
+        left: -15rem;
+        bottom: 10%;
+    }
+    .container {
+        margin-left: 7rem;
+        max-width: initial;
+    }
+}
+@media (max-width: 800px) {
+    .mobile {
+        margin-bottom: 2rem;
+    }
+    .container {
+        flex-direction: column;
+        margin: 0;
+    }
+    article {
+        text-align: center;
+    }
+    .design {
+        left: auto;
+        right: 50%;
+        height: 50rem;
+    }
+    .design:nth-child(2) {
+        top: 20rem;
+        right: auto;
+        left: 50%;
+        height: 50rem;
+    }
+}
+
+@media (min-width: 1600px) {
+    .mobile {
+        width: 350px;
+        font-size: 14px;
+    }
+    .design {
+        width: 40rem;
+    }
+    .container {
+        max-width: 1000px;
+        margin-left: 0;
+    }
+}
+
+/* @keyframes slideright {
+    from {
+        transform: translateX(-150%);
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideleft {
+    from {
+        transform: translateX(150%);
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeLeft {
+    from {
+        transform: translateX(5%);
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes fadeRight {
+    from {
+        transform: translateX(-5%);
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+} */
