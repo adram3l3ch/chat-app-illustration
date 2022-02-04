@@ -55,7 +55,7 @@ body {
     color: hsl(271, 36%, 24%);
     font-size: 2.5rem;
     margin-bottom: 0.5em;
-    /* opacity: 0; */
+    opacity: 0;
     animation: fadeLeft 0.75s 1s ease-out forwards;
 }
 
@@ -63,7 +63,7 @@ body {
     color: hsl(270, 7%, 64%);
     line-height: 1.75em;
     font-size: 1rem;
-    /* opacity: 0; */
+    opacity: 0;
     animation: fadeRight 0.75s 1s ease-out forwards;
 }
 
@@ -180,7 +180,7 @@ p.message__send {
     max-width: 55%;
     width: max-content;
     line-height: 1.5em;
-    /* opacity: 0; */
+    opacity: 0;
     animation: slideright 1s 0.2s ease-out forwards;
 }
 
@@ -190,7 +190,7 @@ p.message__send {
     color: hsl(271, 15%, 43%);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05);
     border-radius: 1em 1em 0.3em 1em;
-    /* opacity: 0; */
+    opacity: 0;
     animation: slideleft 1s 0.2s ease-out forwards;
 }
 
@@ -209,7 +209,7 @@ p.message__send {
     font-size: 0.8em;
     width: 70%;
     margin: 1.25em;
-    /* opacity: 0; */
+    opacity: 0;
     animation: slideright 1s 0.2s ease-out forwards;
 }
 
@@ -233,7 +233,7 @@ p.message__send {
     justify-content: space-between;
     margin: 1.25em;
     margin-left: auto;
-    /* opacity: 0; */
+    opacity: 0;
     animation: slideleft 1s 0.2s ease-out forwards;
 }
 
@@ -339,7 +339,7 @@ input::placeholder {
     }
 }
 
-/* @keyframes slideright {
+@keyframes slideright {
     from {
         transform: translateX(-150%);
     }
@@ -376,4 +376,4 @@ input::placeholder {
         transform: translateX(0);
         opacity: 1;
     }
-} */
+}
